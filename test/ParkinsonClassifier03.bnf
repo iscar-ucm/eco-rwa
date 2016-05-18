@@ -1,0 +1,25 @@
+<Expr> ::= (<Expr><Op><Expr>)|(<Cte>*<Expr>)|(<Expr>/<Cte>)               
+           | <PreOp>(<Expr>)
+           | <MyFcn>(<MySensor>,<Exercise>,<Foot>)
+           | <MyFcn>(<MyTempFcn>,noEx,<Foot>)
+
+
+           
+<Op> ::= +|-|*|/
+<PreOp> ::= Math.log|Math.abs
+
+<MyFcn> ::= MyAvg|MySum|MyMax|MyMin|MyStd|MyTotalVar|MyPod|MyGeoAvg
+<MyTempFcn> ::= <MyPow>|<MyAbs>|<MyDiff>
+
+<MyPow> ::= MyPow(<MySensor>,<Exercise>,<Foot>,<Sign><Exponent>)|MyPow(<MyTempFcn>,noEx,<Foot>,<Sign><Exponent>)
+<MyDiff> ::= MyDiff(<MySensor>,<Exercise>,<Foot>)|MyDiff(<MyTempFcn>,noEx,<Foot>)
+<MyAbs> ::= MyAbs(<MySensor>,<Exercise>,<Foot>)|MyAbs(<MyTempFcn>,noEx,<Foot>)
+
+
+<MySensor> ::= var0|var1|var2|var3|var4|var5
+<Exercise> ::= ex0|ex1|ex2|ex3|ex4|ex5|ex6
+<Foot> ::= f0|f1
+<Cte> ::= <Base>*Math.pow(10,<Sign><Exponent>)
+<Base> ::= 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100
+<Exponent> ::= 1|2|3|4|5|6|8|9
+<Sign> ::= +|-

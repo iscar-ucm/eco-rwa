@@ -1,0 +1,26 @@
+<Expr> ::= (<Expr><Op><Expr>)
+           | (<Cte><Op><Expr>)
+           | <PreOp>(<Expr>)
+           | <FeatureRaw>
+           | <MyPow>
+           | <MyFeatFcn>(<Array>)
+           
+<Op> ::= +|-|*|/
+<PreOp> ::= Math.log|Math.abs|Math.cos|Math.sin|Math.exp
+
+<FeatureRaw> ::= raw(\"<colIdx>\")
+<Array> ::= \"<colIdx><arrayElement>\"
+
+<arrayElement> ::= ;<colIdx>|;<colIdx><arrayElement>
+
+<MyFeatFcn> ::= MyFeatAvg|MyFeatSum|MyFeatStd|MyFeatMin|MyFeatMax
+<MyPow> ::= MyPow(<Expr>,<Sign><Exponent>)
+
+
+<Cte> ::= <Base>*Math.pow(10,<Sign><Exponent>)
+<Base> ::= 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100
+<Exponent> ::= 1|2|3|4|5|6|8|9
+<Sign> ::= +|-
+
+<colIdx> ::= Age | AX_40MW_Seq_RegOfMaxR | AX_40MW_Freq_WinRegLineR | AY_40MW_Seq_RegOfMinR | AY_40MW_Seq_RegOfMinL | AZ_40MW_Seq_RegOfMinL | AZ_40MW_Freq_WinRegLineR | AX_Circ_Seq_RegOfMinR | AX_Circ_Seq_RegOfMinL | AX_Circ_Seq_MeanR | AX_Circ_Seq_HistoAnalysisL | AX_Circ_Seq_IntegralR | AX_Circ_Freq_WinEnergy3to8L | AY_Circ_Seq_EntropyL | AY_Circ_Freq_DominantFreqencyR | AZ_Circ_Seq_RegOfMaxR | AZ_Circ_Seq_RegOfMinL | AX_HT_tab_Seq_RegOfMaxR | AY_HT_tab_Freq_RatioR | AY_HT_tab_Freq_WinRegLineR | AZ_HT_tab_Freq_DominantFreqencyL | GX_40MW_Seq_RegOfMinL | GY_40MW_Seq_RegOfMinR | GZ_40MW_Seq_RegOfMaxL | GZ_40MW_Seq_IntegralL | GX_Circ_Seq_RegOfMinR | GX_Circ_Seq_RegOfMinL | GX_Circ_Seq_MeanR | GY_Circ_Seq_RegOfMinL | GY_Circ_Seq_HistoAnalysisR | GY_Circ_Seq_HistoAnalysisL | GY_Circ_Freq_DominantFreqencyL | GZ_Circ_Freq_WinEnergy3to8R | GX_HT_tab_Seq_RegOfMaxR | GX_HT_tab_Seq_MeanR | GX_HT_tab_Seq_IntegralR | GX_HT_tab_Freq_DominantFreqencyR | GX_HT_tab_Freq_DominantFreqencyL | GY_HT_tab_Seq_RegOfMaxR | GY_HT_tab_Seq_RegOfMinR | GY_HT_tab_Seq_RegOfMinL | GY_HT_tab_Seq_MeanL | GY_HT_tab_Seq_IntegralL | GY_HT_tab_Freq_DominantFreqencyR | GY_HT_tab_Freq_PSD05to3R | GY_HT_tab_Freq_PSD3to8R | AX_Step_MinimumL
+

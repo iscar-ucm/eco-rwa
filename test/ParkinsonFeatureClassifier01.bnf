@@ -1,0 +1,39 @@
+<Expr> ::= (<Expr><Op><Expr>)
+           | (<Cte><Op><Expr>)
+           | <PreOp>(<Expr>)
+           | <FeatureRaw>
+           | <MyPow>
+           | <MyFeatFcn>(<Array>)
+           
+<Op> ::= +|-|*|/
+<PreOp> ::= Math.log|Math.abs|Math.cos|Math.sin|Math.exp
+
+<FeatureRaw> ::= raw(\"<colIdx>\")
+<Array> ::= \"<colIdx><arrayElement>\"
+
+<arrayElement> ::= ;<colIdx>|;<colIdx><arrayElement>
+<colIdx> ::= <FeatureIdx>|<ClinicalIdx>
+
+
+<ClinicalIdx> ::= Age|Weight|Height
+<FeatureIdx> ::= <IdxGroup1>|<IdxGroup2>|<IdxGroup3>|<IdxGroup4>
+<IdxGroup1> ::= GZ_Step_<FeatGroup1>_<Foot>
+<IdxGroup2> ::= <Sensor>_Step_<FeatGroup2><Foot>
+<IdxGroup3> ::= <Sensor>_<Exercise>_Seq_<FeatGroup3><Foot>
+<IdxGroup4> ::= <Sensor>_<Exercise>_Freq_<FeatGroup4><Foot>
+<Sensor> ::= AX|AY|AZ|GX|GY|GZ
+<Exercise> ::= 40MW|Circ|HT_Tab
+<FeatGroup1> ::= Duration|gradRiseSwing|gradFallSwing|gradRiseRoll|gradFallRoll
+<FeatGroup2> ::= Minimum|MinimumStd|Maximum|MaximumStd|MinMaxDiff|MeanValue
+<FeatGroup3> ::= Entropy|RegOfMax|RegOfMin|Mean|Variance|Rms|HistoAnalysis|Integral
+<FeatGroup4> ::= DominantFreqency|Ratio|Energy05to3|Energy3to8|WinEnergy05to3|WinEnergy3to8||PSD05to3|PSD3to8|WinRegLine
+<Foot> ::= R|L
+
+<MyFeatFcn> ::= MyFeatAvg|MyFeatSum|MyFeatStd|MyFeatMin|MyFeatMax
+<MyPow> ::= MyPow(<Expr>,<Sign><Exponent>)
+
+
+<Cte> ::= <Base>*Math.pow(10,<Sign><Exponent>)
+<Base> ::= 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100
+<Exponent> ::= 1|2|3|4|5|6|8|9
+<Sign> ::= +|-
