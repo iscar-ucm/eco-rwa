@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Random;
 import java.util.logging.Logger;
-import hero.util.StringManagement;
+import hero.core.util.StringManagement;
 
 /**
  * Class to manage a data table. The data table is passed
