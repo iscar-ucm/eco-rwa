@@ -115,7 +115,7 @@ public class ParkinsonAdaBoostClassifier extends AbstractProblemGE {
         super(properties.getProperty("BnfPathFile"), 1);
         this.properties = properties;
         this.threadId = CURRENT_THREAD_ID++;
-        compiler = new MyCompiler(properties);
+        compiler = new MyCompiler(properties.getProperty("WorkDir"), properties.getProperty("ClassPathSeparator"));
         
         // Get the classifier and the evaluator of metrics
         kindClassifier = properties.getProperty("Classifier");

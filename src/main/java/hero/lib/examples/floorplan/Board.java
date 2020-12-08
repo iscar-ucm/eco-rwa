@@ -23,6 +23,7 @@ import com.mxgraph.model.mxCell;
 import com.mxgraph.model.mxGeometry;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
+import java.io.File;
 import java.util.Collection;
 import javax.swing.JFrame;
 
@@ -111,7 +112,7 @@ public class Board {
     public static void main(String args[]) {
         if (args.length != 1) {
             args = new String[1];
-            args[0] = "D:\\jlrisco\\Trabajo\\Investiga\\Estudiantes\\DavidCuesta\\benchmarks\\NiagaraC64L5_0.xml";
+            args[0] = "lib" + File.separator + "NiagaraC64L5.xml";
         }
         String fileName = args[0];
         Board board = new Board();

@@ -5,6 +5,28 @@
     <artifactId>hero-rwa</artifactId>
     <version>1.20201205</version>
     <packaging>jar</packaging>
+    
+    <repositories>
+        <!-- To download GITHUB releases as dependencies -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <!-- xDEVS -->
+        <dependency>
+            <groupId>com.github.iscar-ucm</groupId>
+            <artifactId>hero</artifactId>
+            <version>1.20191121</version>
+        </dependency>
+        <!-- JGRAPHX -->
+        <dependency>
+            <groupId>com.github.jgraph</groupId>
+            <artifactId>jgraphx</artifactId>
+            <version>v3.0.0.0</version>
+        </dependency>
+    </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>15</maven.compiler.source>
