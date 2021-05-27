@@ -1,3 +1,3 @@
-# hero-rwa
+# eco-rwa
 
-Real World Applications using the HERO library
+Real World Applications using the ECO library
